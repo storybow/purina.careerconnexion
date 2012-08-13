@@ -1,4 +1,4 @@
 careerconnexion
 ===============
 
-Facebook application files for Nestlé Purina
+Facebook application files for Purina's Career ConneXion app.
