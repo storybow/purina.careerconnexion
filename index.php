@@ -86,7 +86,7 @@ $login_url = $facebook->getLoginUrl( array( 'scope' => 'publish_actions') );
   <!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
   <div id="wrap">
 
-<?php if ($like_status) { ?>
+<?php if ($like_status) { ?>  <!-- While developing locally, add a ! before $like_status variable to show "like" content.  Remove ! to turn back on "like to view content" functionality -->
 
     <header>
       <h1>Nestl&eacute; Purina Careers</h1>
@@ -182,15 +182,7 @@ $login_url = $facebook->getLoginUrl( array( 'scope' => 'publish_actions') );
   redirect_uri=http://www.example.com/response">Art Director Intern</a></p>
 -->
         <p class="aResult f3 s4 f4 s5 accounting audit businessAdministration finance isIT"><a class="newwindow" href="http://ad.doubleclick.net/clk;260616126;84919755;r?http://jobs.nestlepurinacareers.com/servlet/av/jd?ai=680&ji=2634066&sn=I&tf=JobDescriptionPurina.html">Audit Intern</a></p>
-<!--
-        <p class="aResult"><a href="">Business Analysis Intern</a></p>
--->
-<!--
-        <p class="aResult f3 s4 advertising communication journalism marketing publicRelations"><a href="">Client Services Intern</a></p>
--->
-<!--
-        <p class="aResult f3 s4 advertising communication journalism marketing publicRelations"><a href="">Copy Writer Intern</a></p>
--->
+        <p class="aResult f3 s4 f4 s5 audit isIT"><a class="newwindow" href="http://ad.doubleclick.net/clk;260616126;84919755;r?http://jobs.nestlepurinacareers.com/servlet/av/jd?ai=680&ji=2636502&sn=I&tf=JobDescriptionPurinaC.html">Audit - IS/IT Intern</a></p>
         <p class="aResult f3 s4 mba"><a class="newwindow" href="http://ad.doubleclick.net/clk;260616126;84919755;r?http://jobs.nestlepurinacareers.com/servlet/av/jd?ai=680&ji=2633288&sn=I&tf=JobDescriptionPurina.html">Marketing Intern</a></p>
         <p class="aResult f3 s4 advertising businessAdministration business communication journalism management marketing other psychology publicRelations sales"><a class="newwindow" href="http://ad.doubleclick.net/clk;260616126;84919755;r?http://jobs.nestlepurinacareers.com/servlet/av/jd?ai=680&ji=2633407&sn=I&tf=JobDescriptionPurina.html">Sales Intern - Customer Development</a></p> 
         <p class="aResult f3 s4 business logistics supplyChainTransportation"><a class="newwindow" href="http://ad.doubleclick.net/clk;260616126;84919755;r?http://jobs.nestlepurinacareers.com/servlet/av/jd?ai=680&ji=2633666&sn=I&tf=JobDescriptionPurina.html">Supply Chain Intern</a></p>
@@ -201,7 +193,8 @@ $login_url = $facebook->getLoginUrl( array( 'scope' => 'publish_actions') );
         <p class="aResult agriculturalEngineering animalCompanion animalScience biology chemicalEngineering electricalEngineering engineering engineeringTechnology foodManufacturing foodProcessing foodScience industrialEngineering industrialManagement manufacturingManagement mechanicalEngineering operationsManagement productionManagement"><a class="newwindow" href="http://ad.doubleclick.net/clk;260616126;84919755;r?http://jobs.nestlepurinacareers.com/servlet/av/jd?ai=680&ji=2633654&sn=I&tf=JobDescriptionPurina.html">Production Trainee</a></p> <!-- this one has not grad date associated with it -->
         <p class="aResult ad f2 s3 agriculturalEngineering animalScience biology biosystemsEngineering chemistry chemicalEngineering foodManufacturing foodProcessing foodScience microbiology"><a class="newwindow" href="http://ad.doubleclick.net/clk;260616126;84919755;r?http://jobs.nestlepurinacareers.com/servlet/av/jd?ai=680&ji=2633657&sn=I&tf=JobDescriptionPurina.html">Quality Assurance Trainee</a></p>
         <p class="aResult ad f2 s3 businessAdministration business industrialEngineering logistics operationsManagement supplyChainTransportation"><a class="newwindow" href="http://ad.doubleclick.net/clk;260616126;84919755;r?http://jobs.nestlepurinacareers.com/servlet/av/jd?ai=680&ji=2633661&sn=I&tf=JobDescriptionPurina.html">Supply Chain Trainee</a></p>
-        <p class="aResult f3 s4 finance "><a class="newwindow" href="http://ad.doubleclick.net/clk;260616126;84919755;r?http://jobs.nestlepurinacareers.com/servlet/av/jd?ai=680&ji=2635949&sn=I&tf=JobDescriptionPurinaC.html">Finance Internship</a></p>
+        <p class="aResult f3 s4 finance "><a class="newwindow" href="http://ad.doubleclick.net/clk;260616126;84919755;r?http://jobs.nestlepurinacareers.com/servlet/av/jd?ai=680&ji=2635949&sn=I&tf=JobDescriptionPurinaC.html">Finance Intern</a></p>
+        <p class="aResult f3 s4 f4 s5 accounting"><a class="newwindow" href="http://ad.doubleclick.net/clk;260616126;84919755;r?http://jobs.nestlepurinacareers.com/servlet/av/jd?ai=680&ji=2635955&sn=I&tf=JobDescriptionPurinaC.html">Financial Reporting Intern</a></p>
         <p class="connecting">Connecting...</p>
       </div><! -- results -->
       <p id="locations">Many of these positions have multiple locations available across the U.S.</p>
