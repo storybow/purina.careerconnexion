@@ -70,7 +70,6 @@ $login_url = $facebook->getLoginUrl( array( 'scope' => 'publish_actions') );
       xfbml  : true,
       oauth  : true
     });
-      FB.Canvas.setAutoResize();
       FB.Canvas.setAutoGrow();
   };
 
