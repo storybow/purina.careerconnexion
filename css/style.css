@@ -249,7 +249,7 @@ header p a:hover {background-position: 0 -69px;}
 
   /* RESULTS */
 #main #results {background: #fff url(../images/bg-results.png) no-repeat; width: 760px; min-height: 250px; padding: 40px 25px; position: relative; clear: both;}
-#main #results:after {clear: both; content: ''; display: block; height: 0; visibility: hidden;}  
+#main #results:after,#main #results .positions:after {clear: both; content: ''; display: block; height: 0; visibility: hidden;}  
 #main #results .somePositions {color: #333; margin: 30px 60px; font-size: 15px;}
 #main #results .noPositions {color: #333; margin: 30px 60px; text-align: center; font-size: 15px;}
 #main #results .noPositions h5 {color: #c80e1e; margin-bottom: 20px; font-size: 20px; font-weight: normal;}
@@ -259,6 +259,15 @@ header p a:hover {background-position: 0 -69px;}
 #main p#locations {color: #666; font-size: 14px; font-style: italic; margin: 25px 0;}
 #main p.connecting {background: #fff url(../images/connecting3.gif) no-repeat; width: 191px; height: 68px; border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px; border: 1px solid #e9e7e7; position: absolute; top: -95px; left: 308px; text-indent: -9999px; outline: none;}
 #main p.noResults {display: none;}
+#main p.positionUpdate {
+  margin: 30px auto 0 auto;
+  /* color: #fff;
+  background-color: #f4de6f; background-image: -moz-linear-gradient(100% 100% 90deg, #e2ba36, #f4de6f) !important; background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#f4de6f), to(#e2ba36)) !important; 
+  width: 90%;
+  padding: 15px;
+  border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px;
+  */
+}
 
   /* SHARE PAGE */
 .sharePage {background: url(../images/bg-footer2.jpg) no-repeat; width: 647px; height: 132px; margin: 0 0 0 82px; position: relative;}
