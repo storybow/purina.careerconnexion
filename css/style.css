@@ -260,6 +260,7 @@ header p a:hover {background-position: 0 -69px;}
 #main p.connecting {background: #fff url(../images/connecting3.gif) no-repeat; width: 191px; height: 68px; border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px; border: 1px solid #e9e7e7; position: absolute; top: -95px; left: 308px; text-indent: -9999px; outline: none;}
 #main p.noResults {display: none;}
 #main p.positionUpdate {
+  clear: both;
   margin: 30px auto 0 auto;
   /* color: #fff;
   background-color: #f4de6f; background-image: -moz-linear-gradient(100% 100% 90deg, #e2ba36, #f4de6f) !important; background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#f4de6f), to(#e2ba36)) !important; 
