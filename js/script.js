@@ -20,49 +20,69 @@ function strictNewWindow() {
 }
 
 function connexion() {
+  var connecting = $('.connecting');
+  var somePositions = $('.somePositions');
+  var noPositions = $('.noPositions');
 
-  // A little preliminary work
-  $('.somePositions').hide(); // here we hide the congratulations text that is displayed after a match is made
-  $('.noPositions').hide(); // here we hide the sorry message that is displayed if there is no match
-  $('.connecting').hide(); // this hides the connecting button which is shown for a couple seconds while a match is being formulated
-
-  // User selects their info and we save the values in variables
-  $('select').change(function() { // change triggers when the user changes the selected item
-    var gradValue = $('#gradDate :selected').val(); // we set a variable called gradValue equal to the value of the option selected in the select element
-    var majorValue = $('#major :selected').val(); // we do the same for the Major select element
-    bothValues = '.' + gradValue + '.' + majorValue; // we then concatenate these values and place it in a new variable called bothValues
+  // run this when the select is changed (an option is selected)
+  $('select').change(function() {
+    var gradValue = $('#gradDate :selected').val();
+    var majorValue = $('#major :selected').val();
+    window.majorClass = '.' + majorValue;
+    window.bothValues = '.' + gradValue + '.' + majorValue; // would output something like .f2.accounting
   });
 
-  // This is where we output a match, or if there is no match, a sorry message
-  $('.connectMe').click(function() {
-      $('body,html').animate({
-				scrollTop: 500
-			}, 800);
-      $('.somePositions').fadeOut();
-      $('.noPositions').fadeOut();
-      $('.aResult').animate({
-        opacity: 0,
-        top: '-30px'
-      });
-      $('.aResult').fadeOut();
-      $('.connecting').fadeIn();
-      $('.connecting').delay(2000).fadeOut();
-      $('p.' + bothValues).fadeIn();
-      $(bothValues).delay(1500).animate({
-        opacity: 1,
-        top: '0'
-      });
-      $(bothValues + ' a').css('cursor','pointer');
-      
-      if ($('#results p' + bothValues).length > 0){
-        $('.somePositions').delay(2000).fadeIn();
-      } else {
-        $('.noPositions').delay(2000).fadeIn();
-      }
-      
-       
+  // run this when the connectMe button is clicked
+  $('.double-filter .connectMe').click(function() {
+
+    // fade out the connect me button, fade in the connecting button, fade out the connecting button, fade in the connect me button
+    $(this).fadeOut();
+    connecting.delay(300).fadeIn(300);
+    connecting.delay(2000).fadeOut(300);
+    $(this).delay(2000).fadeIn(300);
+
+    /* scroll to the positions
+    $('body,html').animate({
+      scrollTop: 500
+    }, 800);
+    */
+
+    // fade these out in case a user is running two searches in a row
+    somePositions.slideUp();
+    noPositions.slideUp();
+    
+    // this simply creates a slide up and fade out effect for window dressing when you start a new search
+    $('.aResult').animate({
+      opacity: 0,
+      top: '-30px'
     });
+
+    // but then we actually need to fade it out so that is has a display of none
+    $('.aResult').fadeOut();
+
+    $('#results').delay(1900).slideDown();
+
+    // fade in all li's that have the classes we selected (but it still has opacity of 0 from above so we don't see it)
+    $('li' + window.bothValues).fadeIn();
+
+    // no we can make the opacity 1 to fade into view and slide down 
+    $(window.bothValues).delay(1500).animate({
+      opacity: 1,
+      top: '0'
+    });
+    
+    // this is where the magic happens
+    // we want to know if any of the li's have the classes the user selected, so we check each one, and if the length is greater than 1, meaning there is a result, then we show the success message
+    if ($('#results li' + window.bothValues).length > 0){
+      // show this message if any of the li's have this class
+      somePositions.delay(2000).fadeIn();
+    } else {
+      // show this message none of the li's have this class
+      noPositions.delay(2000).slideDown();
+    }
+  });
 }
+
 
 
 //************************************************************************************************************************//

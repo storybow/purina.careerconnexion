@@ -32,7 +32,7 @@ audio:not([controls]) { display: none; }
 
 html { font-size: 100%; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
 
-html, button, input, select, textarea { font-family: "Trebuchet MS", sans-serif; color: #111; }
+html, button, input, select, textarea { font-family: "meta-book", serif; color: #444; }
 
 body { margin: 0; font-size: 1em; line-height: 1.4; }
 
@@ -235,40 +235,176 @@ header p a:hover {background-position: 0 -69px;}
                     
 #main {position: relative;}
 #main h3 {background: url(../images/bg-next_step.png) no-repeat; width: 732px; height: 45px; margin-left: 39px; text-indent: -9999px; outline: none;}
-#main p {margin: 5px 0; text-align: center; font-size: 13px;}
-#main p.connectMe {background-image: url(../images/button-connect_me.png); width: 192px; height: 69px; margin: 0 auto 20px auto; text-indent: -9999px; outline: none; cursor: pointer; clear: both;}
-#main p.connectMe:hover {background-position: 0 -69px;}
-#main .filter {width: 49%; margin-bottom: 20px; float: left;}
-#main .filter:after {clear: both; content: ''; display: block; height: 0; visibility: hidden;}
-#main .filter select {width: 300px;}
-#main #major h4 {background: url(../images/bg-major.png) no-repeat; width: 61px; height: 18px; margin-left: 20px;}
-#main #major select {margin-left: 20px;}
-#main .filter h4 {margin: 0 0 10px 0; text-indent: -9999px; outline: none;}
-#main #gradDate h4 {background: url(../images/bg-gradDate.png) no-repeat; width: 151px; height: 14px; margin-left: 100px; margin-bottom: 14px;}
-#main #gradDate select {margin-left: 100px;}
+#main p {width: 85%; margin: 5px auto; text-align: center; font-size: 16px; line-height: 24px;}
+
+.filters {
+  width: 662px;
+  margin: 0 auto;
+}
+
+.cc-filter {
+    width: 235px;
+    margin-bottom: 15px;
+    float: left;
+  }
+
+.cc-filter h4 {
+  color: #b31b27;
+  font-family: 'antenna-regular';
+  font-size: 18px;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+}
+
+.cc-filter select {
+  width: 100%;
+  font-size: 14px;
+}
+
+#gradDate {
+  margin: 0 35px 15px 85px;
+}
+
+.connect-buttons {
+  width: 281px;
+  height: 69px;
+  margin: 0 auto 40px auto !important;
+  position: relative;
+  clear: both;
+}
+
+.connectMe {
+  background: url(../images/button-connect_me.png) no-repeat;
+  width: 281px !important;
+  height: 69px;
+  text-indent: -9999px; outline: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+}
+
+.connectMe:hover {
+  background-position: 0 -69px;
+}
+
+.connecting {
+  background: url(../images/connecting.gif) no-repeat;
+  width: 281px !important;
+  height: 69px;
+  text-indent: -9999px;
+  outline: none;
+  cursor: pointer;
+  position: absolute;
+  left: 0;
+  top: 0;
+  text-indent: -9999px; outline: none;
+  display: none;
+}
+
 
   /* RESULTS */
-#main #results {background: #fff url(../images/bg-results.png) no-repeat; width: 760px; min-height: 250px; padding: 40px 25px; position: relative; clear: both;}
-#main #results:after,#main #results .positions:after {clear: both; content: ''; display: block; height: 0; visibility: hidden;}  
-#main #results .somePositions {color: #333; margin: 30px 60px; font-size: 15px;}
-#main #results .noPositions {color: #333; margin: 30px 60px; text-align: center; font-size: 15px;}
-#main #results .noPositions h5 {color: #c80e1e; margin-bottom: 20px; font-size: 20px; font-weight: normal;}
-#main p.aResult {width: 304px; height: 34px; margin-left: 53px; position: relative; float: left;}
-#main p.aResult a {color: #fff; background-image: url(../images/bg-aResult.png); background-repeat: no-repeat; width: 304px; height: 26px; padding-top: 8px; display: block; text-decoration: none; text-align: center; cursor: default;}
-#main p.aResult a:hover {background-position: 0 -34px;}
-#main p#locations {color: #666; font-size: 14px; font-style: italic; margin: 25px 0;}
-#main p.connecting {background: #fff url(../images/connecting3.gif) no-repeat; width: 191px; height: 68px; border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px; border: 1px solid #e9e7e7; position: absolute; top: -95px; left: 308px; text-indent: -9999px; outline: none;}
-#main p.noResults {display: none;}
-#main p.positionUpdate {
-  clear: both;
-  margin: 30px auto 0 auto;
-  /* color: #fff;
-  background-color: #f4de6f; background-image: -moz-linear-gradient(100% 100% 90deg, #e2ba36, #f4de6f) !important; background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#f4de6f), to(#e2ba36)) !important; 
-  width: 90%;
-  padding: 15px;
-  border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px;
-  */
-}
+  #results {
+    background: url(../images/bg-results.png) no-repeat top center;
+    width: 100%;
+    margin: 30px auto 20px auto;
+    padding: 30px 0 0 0;
+  }
+
+  #results .somePositions {
+    display: none;
+  }
+
+  #results .noPositions {
+    display: none;
+  }
+
+  #results .noPositions h5 {
+    color: #c80e1e;
+    margin: 15px auto;
+    padding: 0;
+    border: none;
+    font-family: 'antenna-regular';
+    font-size: 20px;
+    text-align: center;
+  }
+
+  #results .noPositions p {
+    width: 65%;
+  }
+
+  #results .noPositions a {
+    text-decoration: none;
+  }
+
+  .positions {
+    width: 546px;
+    margin: 30px auto 20px auto;
+    padding: 0;
+  }
+
+  .positions li {
+    width: 263px;
+    background: none;
+    margin: 0 10px 12px 0 !important;
+    padding: 0;
+    position: relative;
+    list-style: none;
+    float: left;
+  }
+
+  .positions li a {
+    color: #fff;
+    background: url(../images/bg-position.png) no-repeat;
+    width: 263px;
+    height: 33px;
+    padding: 0;
+    position: relative;
+    display: block;
+    font-family: 'antenna-bold';
+    font-size: 14px;
+    line-height: 33px;
+    text-align: center;
+    text-decoration: none;
+  }
+
+  .positions li a:hover {
+    background-position: 0 -33px;
+  }
+
+  .positions li b {
+    font-weight: normal;
+  }
+
+  .positions.two-lines li {
+    font-size: 11px;
+  }
+
+  .location-note {
+    background: url(../images/bg-location_note.png) no-repeat bottom center;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 5% 30px 5%;
+    text-align: center;
+    font-size: 16px;
+    font-style: italic;
+  }
+
+  p.arrow {
+    margin: 15px auto !important;
+    font-family: 'antenna-bold';
+    font-size: 12px;
+    line-height: 14px;
+    text-transform: uppercase;
+  }
+
+  p.arrow a {
+    background: url(../images/arrow.png) no-repeat 100% 5px;
+    padding-right: 20px;
+    text-decoration: none;
+    font-size: 12px;
+  }
 
   /* SHARE PAGE */
 .sharePage {background: url(../images/bg-footer2.jpg) no-repeat; width: 647px; height: 132px; margin: 0 0 0 82px; position: relative;}
